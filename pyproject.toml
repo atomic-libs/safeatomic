@@ -1,7 +1,26 @@
 [project]
 name = "safeatomic"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.2.0"
+description = "Safe, cross platform file operations"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.2.1",
+    "psutil>=7.0.0",
+    "pyyaml>=6.0.2",
+    "ruamel-yaml>=0.18.14",
+]
+
+# uv pip install -e .
+[project.scripts]
+safeatomic = "safeatomic.atomic:main"
+
+# uv pip install -e .[dev]
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

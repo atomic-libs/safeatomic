@@ -1,0 +1,4 @@
+click>=8.2.1
+psutil>=7.0.0
+PyYAML>=6.0.2
+ruamel-yaml>=0.18.14
