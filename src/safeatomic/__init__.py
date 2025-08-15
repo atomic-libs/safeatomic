@@ -1,6 +1,6 @@
 # src/safeatomic/__init__.py
 
-from atomic import (
+from .atomic import (
     AtomicWriter,
     AtomicReader,
     write_atomic as atomic_write,
@@ -18,8 +18,8 @@ __all__ = [
     "AtomicWriter",
     "AtomicReader",
     "atomic_write",
-    "move_atomic_force",
     "move_atomic",
+    "move_atomic_force",
     "atomic_json_dump",
     "atomic_json_load",
     "atomic_yaml_dump",
